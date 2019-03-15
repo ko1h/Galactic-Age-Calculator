@@ -4,7 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/main.js',
+  entry: './src/index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
@@ -24,12 +24,20 @@ module.exports = {
         removeComments: true,
         collapseWhitespace: true
       }
-    })
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/example.html',
+      filename: 'example.html',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true
+      }
+    }),
   ],
   module: {
     rules: [
       {
-        test: /\.s?css$/,
+        test: /\.scss$/,
         use: [
           'style-loader',
           'css-loader',
