@@ -17,17 +17,9 @@ module.exports = {
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Triangle Tracker',
+      title: 'galactic calculator',
       template: './src/index.html',
       inject: 'body',
-      minify: {
-        removeComments: true,
-        collapseWhitespace: true
-      }
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/example.html',
-      filename: 'example.html',
       minify: {
         removeComments: true,
         collapseWhitespace: true
@@ -84,4 +76,4 @@ module.exports = {
       },
     ]
   }
-};
+}
