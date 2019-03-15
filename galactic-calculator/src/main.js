@@ -8,12 +8,12 @@ import { AgeCalendar } from './galactic-calculator.js';
 $(document).ready(function() {
   $("#age-form").submit(function(event) {
     event.preventDefault();
-    let monthInput = parseInt($('#month').val());
-    let dayInput = parseInt($('#day').val());
-    let yearInput = parseInt($('#year').val());
+    let dateInput = $('#birthday').val();
+    let sexInput = $('#space-gender').val();
+    let newAgeCalculator = new AgeCalculator (dateInput, sexInput);
+    let birthdayInput = new Date(dateInput);
 
-    const newCombine = combine(newMonth, newDay, newYear)
-    let birthday = new Date(newCombine);
+    
   });
 
 });
