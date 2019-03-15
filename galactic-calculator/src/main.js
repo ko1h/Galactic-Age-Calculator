@@ -2,6 +2,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './sass/styles.scss';
+import { AgeCalendar } from './galactic-calculator.js';
 
 
 $(document).ready(function() {
@@ -10,7 +11,9 @@ $(document).ready(function() {
     let monthInput = parseInt($('#month').val());
     let dayInput = parseInt($('#day').val());
     let yearInput = parseInt($('#year').val());
-    let birthday = new Date(month, day, year);
+
+    const newCombine = combine(newMonth, newDay, newYear)
+    let birthday = new Date(newCombine);
   });
 
 });
