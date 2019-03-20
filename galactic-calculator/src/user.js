@@ -1,19 +1,27 @@
 export class User {
-  constructor(birthday,today) {
-    this.birthday = birthday;
-    this.today = today;
+
+  constructor(day) {
+    this.day= day;
   }
 
-  totalMilliSecAlive() {
-    let totalMillSec = this.today - this.birthday;
-    return totalMillSec;
+  lifeOnMercury() {
+    const ageMercury = Math.floor((this.day * 365) / 88);
+    return ageMercury;
   }
-  totalEarthDays() {
-    let totalEarthDays = Math.floor((this.totalMilliSecAlive() / 86400000));
-    return totalEarthDays;
+  lifeOnVenus() {
+    const ageVenus = Math.floor((this.day * 365) / 226);
+    return ageVenus;
   }
-  ageEarth() {
-    let ageEarth = Math.floor((this.totalEarthDays() / 365));
-    return ageEarth;
+  lifeOnMars() {
+    const ageMars = Math.floor((this.day * 365) / 686);
+    return ageMars;
+  }
+  lifeOnJupiter() {
+    const ageJupiter = Math.floor((this.day * 365) / 4328);
+    return ageJupiter;
   }
 }
+
+
+//2640
+//10950

@@ -1,13 +1,13 @@
 const path = require('path');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
-module.exports = {
+module.exports= {
   entry: './src/index.js',
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    filename:'bundle.js',
+    path: path.resolve(__dirname,'dist')
   },
   devtool: 'eval-source-map',
   devServer: {
@@ -17,17 +17,20 @@ module.exports = {
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'galactic calculator',
+      title: 'galactic-calculator',
       template: './src/index.html',
-      inject: 'body',
-      minify: {
-        removeComments: true,
-        collapseWhitespace: true
-      }
-    }),
+      inject: 'body'
+    })
   ],
   module: {
     rules: [
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      },
       {
         test: /\.scss$/,
         use: [
@@ -37,11 +40,29 @@ module.exports = {
         ]
       },
       {
+        test:/\.html$/,
+        use: [
+          'html-loader'
+        ]
+      },
+      {
+        test: /\.(gif|png|jpe?g)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'assets/images/'
+            }
+          }
+        ]
+      },
+      {
         test: /\.js$/,
         exclude: [
-                /node_modules/,
-                /spec/
-              ],
+          /node_modules/,
+          /spec/
+        ],
         loader: "eslint-loader"
       },
       {
@@ -54,26 +75,7 @@ module.exports = {
         options: {
           presets: ['es2015']
         }
-      },
-      {
-        test: /\.(gif|png|jpe?g)$/,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: '[name].[ext]',
-                outputPath: 'assets/images/'
-              }
-            }
-          ]
-        },
-
-        {
-        test:/\.html$/,
-        use: [
-          'html-loader'
-        ]
-      },
+      }
     ]
   }
-}
+};
