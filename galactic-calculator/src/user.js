@@ -3,7 +3,7 @@ export class User {
   constructor(age, sex, averageAge) {
     this.age= age;
     this.sex = sex;
-    this.averageAge = averageAge;
+    this.averageAge = averageAge;no
   }
 
   lifeOnMercury() {
