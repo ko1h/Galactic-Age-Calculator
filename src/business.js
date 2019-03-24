@@ -3,7 +3,7 @@ export class User {
   constructor(age, sex, averageAge) {
     this.age= age;
     this.sex = sex;
-    this.averageAge = averageAge;
+    this.averageAge = 80;
   }
 
   lifeOnMercury() {
@@ -21,6 +21,14 @@ export class User {
   lifeOnJupiter() {
     const ageJupiter = Math.floor((this.age * 365) / 4328);
     return ageJupiter;
+  }
+  lifeExpectancyOnEarth() {
+    const yearleftOnEarth = (this.averageAge - this.age);
+    return yearleftOnEarth;
+  }
+  lifeExpectancyOnMercury() {
+    const yearleftOnMercury = (this.averageAge + this.sex) - Math.floor((this.age * 365) / 88);
+    return yearleftOnMercury;
   }
   lifeExpectancyOnVenus() {
     const yearleftOnVenus = (this.averageAge + this.sex) - Math.floor((this.age * 365) / 226);
