@@ -27,11 +27,11 @@ export class User {
     return yearleftOnVenus;
   }
   lifeExpectancyOnMars() {
-    const yearleftOnMars = (this.averageAge + this.sex) - Math.floor((this.age * 365) / 226);
+    const yearleftOnMars = (this.averageAge + this.sex) - Math.floor((this.age * 365) / 686);
     return yearleftOnMars;
   }
   lifeExpectancyOnJupiter() {
-    const yearleftOnJupiter = (this.averageAge + this.sex) - Math.floor((this.age * 365) / 226);
+    const yearleftOnJupiter = (this.averageAge + this.sex) - Math.floor((this.age * 365) / 4328);
     return yearleftOnJupiter;
   }
 }
