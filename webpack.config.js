@@ -1,3 +1,4 @@
+
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -17,7 +18,7 @@ module.exports= {
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'galactic-calculator',
+      title: 'Journal',
       template: './src/index.html',
       inject: 'body'
     })
@@ -37,24 +38,6 @@ module.exports= {
           'style-loader',
           'css-loader',
           'sass-loader'
-        ]
-      },
-      {
-        test:/\.html$/,
-        use: [
-          'html-loader'
-        ]
-      },
-      {
-        test: /\.(gif|png|jpe?g)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'assets/images/'
-            }
-          }
         ]
       },
       {
