@@ -2,7 +2,7 @@
 
 #### _Take any your age and returns their age on a different planet, 15 March 2019_
 
-#### By _** Kohichi Horii**_
+#### _By Kohichi Horii_
 
 ## Description
 
