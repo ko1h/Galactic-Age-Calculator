@@ -9,27 +9,31 @@
 * _The purpose of this project is to have a user input a their age and the program will return their age back to them in they lived on a different planet:_
 
 ## Specs
-* _Take user month, day and year when they were born_
-* _Returns user their age in Mercury Years_
-* _Returns user their age in Venus Years_
-* _Returns user their age in Mars Years_
-* _Returns user their age in Jupiter Years_
-* _Will calculate how many years the user has to live on each planet_
-
-
+* _User Enters their age_
+* _User selects their sex_
+* _Program returns user age in Earth_
+* _Program returns user life expectancy on Earth_
+* _Program returns user age in Mercury_
+* _Program returns user life expectancy on Mercury_
+* _Program returns user age in Venus Years_
+* _Program returns user life expectancy on Venus_
+* _Program returns user age in Mars Years_
+* _Program returns user life expectancy on Mars_
+* _Program returns user age in Jupiter Years_
+* _Program returns user life expectancy on Jupiter_
 
 
 ## Setup/Installation Requirements
 
-* _Clone Repository_
+* _Use command line to clone repository_
 * _Github link https://github.com/ko1h/galactic-calculator.git_
-* _Open folder_
-* _Open index.html_
-* _use atom to open up repository *look at webpage by opening up repository then viewing through google chrome_
+* _npm install_
+* _npm run start_
+* _npm test_
 
 ## Known Bugs
 
-_The dropdown navbar is having issue._
+_No known bugs at this time._
 
 ## Support and contact details
 
@@ -37,11 +41,11 @@ _If you are having issues you can contact us at kohichi.horii@gmail.com_
 
 ## Technologies Used
 
-_Github, Git, HTML, Javascript, CSS, Bootstrap, and jQuery_
+_Javascript, Node, Jasmine, Karma, HTML, CSS, Git, jQuery, bootstrap, ES6_
 
 
 ### License
 
 *This software is licensed under the MIT license.*
 
-Copyright (c) 2018 **_KH_** MIT license.
+Copyright (c) 2019 **_KH_** MIT license.

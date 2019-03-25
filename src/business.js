@@ -15,11 +15,11 @@ export class User {
     return ageVenus;
   }
   lifeOnMars() {
-    const ageMars = Math.floor((this.age * 365) / 686);
+    const ageMars = Math.floor((this.age * 365) / 687);
     return ageMars;
   }
   lifeOnJupiter() {
-    const ageJupiter = Math.floor((this.age * 365) / 4328);
+    const ageJupiter = Math.floor((this.age * 365) / 4330);
     return ageJupiter;
   }
   lifeExpectancyOnEarth() {
