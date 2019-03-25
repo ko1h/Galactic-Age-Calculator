@@ -8,12 +8,15 @@ import { User } from './business.js';
 $(document).ready(function() {
   $('#age-form').submit(function(event) {
     event.preventDefault();
-    const age = parseInt($('input#age').val());
+    const year = parseInt($('input#year').val());
     let sex = parseInt($('select#sex').val());
+    let today = new Date();
+    let todayYear = today.getFullYear();
+    console.log(todayYear);
 
-    let ageCalculatorOutput = new User(age, sex);
+    let ageCalculatorOutput = new User(year, sex, todayYear);
     console.log(ageCalculatorOutput);
-    $('#earthYears').text(age);
+    $('#earthYears').text(ageCalculatorOutput.userAge());
     $('#earthExpenctany').text(ageCalculatorOutput.lifeExpectancyOnEarth());
 
     $('#mercuryYears').text(ageCalculatorOutput.lifeOnMercury());
