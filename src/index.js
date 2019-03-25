@@ -12,17 +12,17 @@ $(document).ready(function() {
     let sex = parseInt($('select#sex').val());
     let today = new Date();
     let todayYear = today.getFullYear();
-    console.log(todayYear);
+
 
     let ageCalculatorOutput = new User(year, todayYear, sex);
-    console.log(ageCalculatorOutput);
+
     $('#earthYears').text(ageCalculatorOutput.userAge());
     $('#earthExpenctany').text(ageCalculatorOutput.lifeExpectancyOnEarth());
 
     $('#mercuryYears').text(ageCalculatorOutput.lifeOnMercury());
-    console.log("this is working");
+
     $('#mercuryExpenctany').text(ageCalculatorOutput.lifeExpectancyOnMercury());
-    console.log("this is also working");
+    
     $('#venusYears').text(ageCalculatorOutput.lifeOnVenus());
     $('#venusExpenctany').text(ageCalculatorOutput.lifeExpectancyOnVenus());
 
