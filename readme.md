@@ -11,9 +11,9 @@
 ## Specs
 * _User Enters their age_
 * _User selects their sex_
-* _Program returns user age in Earth_
+* _Program returns user age in Earth years_
 * _Program returns user life expectancy on Earth_
-* _Program returns user age in Mercury_
+* _Program returns user age in Mercury years_
 * _Program returns user life expectancy on Mercury_
 * _Program returns user age in Venus Years_
 * _Program returns user life expectancy on Venus_
