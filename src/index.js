@@ -14,7 +14,7 @@ $(document).ready(function() {
     let todayYear = today.getFullYear();
     console.log(todayYear);
 
-    let ageCalculatorOutput = new User(year, sex, todayYear);
+    let ageCalculatorOutput = new User(year, todayYear, sex);
     console.log(ageCalculatorOutput);
     $('#earthYears').text(ageCalculatorOutput.userAge());
     $('#earthExpenctany').text(ageCalculatorOutput.lifeExpectancyOnEarth());
