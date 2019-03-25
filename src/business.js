@@ -29,24 +29,44 @@ export class User {
     return ageJupiter;
   }
   lifeExpectancyOnEarth() {
-    const yearleftOnEarth = (this.averageAge - this.userAge());
-    return yearleftOnEarth;
+    let yearleftOnEarth = (this.averageAge - this.userAge());
+    if (yearleftOnEarth <= 0) {
+      return ("You actually passed away" + " " + yearleftOnEarth +  " years ago");
+    } else {
+      return yearleftOnEarth;
+    }
   }
   lifeExpectancyOnMercury() {
     const yearleftOnMercury = (this.averageAge + this.sex) - Math.floor((this.userAge() * 365) / 88);
-    return yearleftOnMercury;
+    if (yearleftOnMercury <= 0) {
+      return ("You actually passed away" + " " + yearleftOnMercury +  " years ago");
+    } else {
+      return yearleftOnMercury;
+    }
   }
   lifeExpectancyOnVenus() {
     const yearleftOnVenus = (this.averageAge + this.sex) - Math.floor((this.userAge() * 365) / 226);
-    return yearleftOnVenus;
+    if (yearleftOnVenus <= 0) {
+      return ("You actually passed away" + " " + yearleftOnVenus +  " years ago");
+    } else {
+      return yearleftOnVenus;
+    }
   }
   lifeExpectancyOnMars() {
     const yearleftOnMars = (this.averageAge + this.sex) - Math.floor((this.userAge() * 365) / 686);
-    return yearleftOnMars;
+    if (yearleftOnMars <= 0) {
+      return ("You actually passed away" + " " +  yearleftOnMars +  " years ago");
+    } else {
+      return yearleftOnMars;
+    }
   }
   lifeExpectancyOnJupiter() {
     const yearleftOnJupiter = (this.averageAge + this.sex) - Math.floor((this.userAge() * 365) / 4328);
-    return yearleftOnJupiter;
+    if (yearleftOnJupiter <= 0) {
+      return ("You actually passed away" + " " + yearleftOnJupiter +  " years ago");
+    } else {
+      return yearleftOnJupiter;
+    }
   }
 }
 
